@@ -1,4 +1,5 @@
 function animate(obj,target,callback) {
+    clearTimeout(obj.timer);
     obj.timer = setInterval(function () {
         var step = (target - obj.offsetLeft) / 10;
         step = step > 0 ? Math.ceil(step) : Math.floor(step);
